@@ -93,3 +93,10 @@ Review generated materials for syllabus fit, correctness, fairness, accessibilit
 - Research: five themes and discovery links supplied; exact references still need verification.
 - Reminders, student-specific assignment tracking and production AI integration require a backend, authentication, approved integrations and testing.
 - Responsible AI policy is a proposed draft and must be reconciled with institutional regulations.
+
+
+## Responsible AI prompt/response evidence and feedback form
+
+The website contains a syllabus-based course-planning prompt, an Open ChatGPT link, a Copy Prompt control, a response field for the real output, and a transcript-download control. Run the prompt in the tool actually used, paste its genuine response, and attach original screenshots of that tool showing prompt and answer. The website does not generate a fake AI response.
+
+The repository also contains `google-apps-script/CreateFswExitTicketForm.gs` and `GOOGLE-FORM-SETUP.md`. Running the Apps Script in the instructor's Google account creates the real form and response spreadsheet. Questions cover lesson mood, what was understood, what remains unclear, confidence, and “Questions, feedback or a lab milestone?”. Copy the resulting responder URL into `EXIT_TICKET_FORM_URL` in `script.js` and commit the change. Until then, the website says the form link is not yet configured.
