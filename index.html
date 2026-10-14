@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI-enabled course portal for Full Stack Web Development Lab, U23CS7L1, Academic Year 2026–27.">
+  <title>FSWD Lab | AI-Enabled Course Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand"><div class="brand-mark">FS</div><div><strong>FSWD Lab</strong><small>U23CS7L1 · 2026–27</small></div></div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="mainNav" aria-label="Main navigation">
+    <a href="#overview">Overview</a><a href="#outcomes">Outcomes</a><a href="#schedule">Experiments</a>
+    <a href="#resources">Resources</a><a href="#assessment">Assessment</a><a href="#lab">Interactive Lab</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="overview">
+  <div class="hero-copy">
+    <p class="eyebrow">B.E. Computer Science & Engineering · Core Course</p>
+    <h1>Build. Integrate.<br><span>Deploy.</span></h1>
+    <p class="hero-lead">A practical learning space for responsive interfaces, JavaScript, React, REST APIs, MongoDB and full-stack deployment—supported by responsible AI and outcome-based learning.</p>
+    <div class="hero-actions"><a class="btn primary" href="#schedule">Explore lab experiments</a><a class="btn ghost" href="#resources">Open resources ↗</a></div>
+    <div class="hero-stats"><div><strong>12</strong><span>Lab experiments</span></div><div><strong>5</strong><span>Course outcomes</span></div><div><strong>40 / 60</strong><span>CIE / SEE marks</span></div></div>
+  </div>
+  <div class="hero-panel">
+    <div class="terminal-top"><i></i><i></i><i></i><span>portfolio.js</span></div>
+    <pre><code><span class="code-purple">const</span> course = {
+  code: <span class="code-green">"U23CS7L1"</span>,
+  stack: [
+    <span class="code-green">"HTML/CSS"</span>,
+    <span class="code-green">"JavaScript"</span>,
+    <span class="code-green">"React"</span>,
+    <span class="code-green">"Node + Express"</span>,
+    <span class="code-green">"MongoDB"</span>
+  ],
+  goal: <span class="code-green">"ship a real app"</span>
+};
+
+<span class="code-purple">await</span> deploy(course);</code></pre>
+    <div class="terminal-foot"><span class="pulse"></span> Learn by building · Validate by testing</div>
+  </div>
+</section>
+<section class="section intro-grid">
+  <div><p class="eyebrow">Course information</p><h2>One portfolio.<br>End-to-end skills.</h2><p class="muted">The lab follows the supplied AICTE model curriculum for academic year 2026–27. Build the same portfolio progressively, then evolve it into a MERN application.</p></div>
+  <div class="info-cards"><article class="mini-card"><span>Course code</span><strong>U23CS7L1</strong></article><article class="mini-card"><span>Prerequisite</span><strong>HTML/CSS basics</strong></article><article class="mini-card"><span>Contact hours</span><strong>3 practical hours/week</strong></article><article class="mini-card"><span>Credits</span><strong>1.5</strong></article></div>
+</section>
+<section class="section" id="outcomes">
+  <div class="section-heading"><div><p class="eyebrow">Outcome-based learning</p><h2>Course outcomes</h2></div><p class="muted">Use the outcome labels in your lab journal, assessment evidence and reflection.</p></div>
+  <div class="outcome-grid">
+    <article class="outcome-card"><span class="co">CO1</span><h3>Responsive interfaces</h3><p>Design responsive web pages using Semantic HTML and CSS.</p><small>Evidence: semantic structure, responsive portfolio</small></article>
+    <article class="outcome-card"><span class="co">CO2</span><h3>Interactive behaviour</h3><p>Develop interactive web applications using JavaScript.</p><small>Evidence: DOM, events, validation and Fetch API</small></article>
+    <article class="outcome-card"><span class="co">CO3</span><h3>React UI</h3><p>Build dynamic user interfaces using React.js.</p><small>Evidence: components, props, state and effects</small></article>
+    <article class="outcome-card"><span class="co">CO4</span><h3>API + database</h3><p>Develop RESTful APIs and database-driven applications using the MERN stack.</p><small>Evidence: Express endpoints and MongoDB CRUD</small></article>
+    <article class="outcome-card"><span class="co">CO5</span><h3>Integration + deployment</h3><p>Integrate and deploy full-stack web applications on cloud platforms.</p><small>Evidence: deployed, tested full-stack portfolio</small></article>
+  </div>
+</section>
+<section class="section tinted" id="schedule">
+  <div class="section-heading"><div><p class="eyebrow">Learning sequence</p><h2>12 lab experiments</h2></div><label class="search-label">Filter experiments <input id="experimentSearch" type="search" placeholder="Try React, API, CSS…"></label></div>
+  <div class="experiment-list" id="experimentList">
+    <article class="experiment" data-search="html semantic portfolio"><span class="exp-no">01</span><div><h3>HTML — Personal portfolio</h3><p>Semantic tags, image, form, table, skills and ratings.</p></div><span class="tag">CO1 · K3</span></article>
+    <article class="experiment" data-search="css box model flexbox grid responsive"><span class="exp-no">02</span><div><h3>CSS — Responsive styling</h3><p>Box Model, Flexbox, Grid and responsive media queries.</p></div><span class="tag">CO1 · K3</span></article>
+    <article class="experiment" data-search="javascript operators arrays functions strings"><span class="exp-no">03</span><div><h3>JavaScript basics</h3><p>Operators, control flow, arrays, functions and strings.</p></div><span class="tag">CO2 · K3</span></article>
+    <article class="experiment" data-search="dom events project cards theme"><span class="exp-no">04</span><div><h3>DOM and events</h3><p>Add/remove project cards, change themes and respond to events.</p></div><span class="tag">CO2 · K3</span></article>
+    <article class="experiment" data-search="form validation regex try catch"><span class="exp-no">05</span><div><h3>Form validation</h3><p>Regex validation and try-catch exception handling.</p></div><span class="tag">CO2 · K4</span></article>
+    <article class="experiment" data-search="fetch api async await github"><span class="exp-no">06</span><div><h3>Fetch API</h3><p>Fetch and render live data using async/await.</p></div><span class="tag">CO2 · K4</span></article>
+    <article class="experiment" data-search="react functional components props state useState useEffect"><span class="exp-no">07</span><div><h3>React.js</h3><p>Functional components, props, useState and useEffect.</p></div><span class="tag">CO3 · K3</span></article>
+    <article class="experiment" data-search="node.js event loop http server modules"><span class="exp-no">08</span><div><h3>Node.js</h3><p>Event loop, HTTP server and core modules.</p></div><span class="tag">CO4 · K3</span></article>
+    <article class="experiment" data-search="express restful api routes contact form"><span class="exp-no">09</span><div><h3>Express.js REST API</h3><p>Portfolio endpoints and contact-form submissions.</p></div><span class="tag">CO4 · K4</span></article>
+    <article class="experiment" data-search="mongodb mongoose crud atlas"><span class="exp-no">10</span><div><h3>MongoDB & Mongoose</h3><p>Connect Atlas and perform CRUD on Projects and Contacts.</p></div><span class="tag">CO4 · K4</span></article>
+    <article class="experiment" data-search="full stack integration mern react express mongodb"><span class="exp-no">11</span><div><h3>Full-stack integration</h3><p>Integrate React, Express and MongoDB into a deployable MERN app.</p></div><span class="tag">CO5 · K6</span></article>
+    <article class="experiment" data-search="deployment cloud production"><span class="exp-no">12</span><div><h3>Deployment</h3><p>Publish the full MERN portfolio and verify public access.</p></div><span class="tag">CO5 · K6</span></article>
+  </div>
+</section>
+<section class="section" id="resources">
+  <div class="section-heading"><div><p class="eyebrow">Trusted starting points</p><h2>Learning resources</h2></div><p class="muted">Use official documentation first; use AI to explain, compare and debug—not to replace testing.</p></div>
+  <div class="resource-grid">
+    <a class="resource" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer"><span>01 / Frontend</span><h3>HTML, CSS & Web APIs</h3><p>Semantic HTML, forms, layout, accessibility and browser APIs.</p><b>MDN Web Docs ↗</b></a>
+    <a class="resource" href="https://react.dev/learn" target="_blank" rel="noreferrer"><span>02 / UI</span><h3>React Learn</h3><p>Components, props, events, state, lists and effects.</p><b>React.dev ↗</b></a>
+    <a class="resource" href="https://nodejs.org/en/learn" target="_blank" rel="noreferrer"><span>03 / Runtime</span><h3>Node.js Learn</h3><p>Runtime fundamentals, asynchronous work and server development.</p><b>Node.js ↗</b></a>
+    <a class="resource" href="https://expressjs.com/en/guide/routing.html" target="_blank" rel="noreferrer"><span>04 / API</span><h3>Express Routing</h3><p>Build readable REST endpoints and middleware pipelines.</p><b>Express.js ↗</b></a>
+    <a class="resource" href="https://www.mongodb.com/docs/" target="_blank" rel="noreferrer"><span>05 / Data</span><h3>MongoDB Docs</h3><p>Documents, collections, validation, CRUD and deployment security.</p><b>MongoDB ↗</b></a>
+    <a class="resource" href="https://docs.github.com/en/pages" target="_blank" rel="noreferrer"><span>06 / Publish</span><h3>GitHub Pages</h3><p>Publish the static course portal from a repository.</p><b>GitHub Docs ↗</b></a>
+  </div>
+</section>
+<section class="section tinted" id="assessment">
+  <div class="section-heading"><div><p class="eyebrow">Assessment plan</p><h2>Evidence over activity</h2></div><p class="muted">Confirm the final rubric and institutional policy with the course coordinator before official use.</p></div>
+  <div class="assessment-layout">
+    <div class="score-card"><span>Continuous Internal Evaluation</span><strong>40 <small>marks</small></strong><div class="bar"><i style="width:40%"></i></div><p>Lab execution, journal/record, viva, mini-project milestones and reflection (illustrative split to be approved locally).</p></div>
+    <div class="score-card"><span>Semester End Examination</span><strong>60 <small>marks</small></strong><div class="bar"><i style="width:60%"></i></div><p>Practical task, code correctness, explanation, testing and outcome evidence.</p></div>
+  </div>
+  <div class="rubric">
+    <h3>Suggested practical rubric (100 points, normalized locally)</h3>
+    <div class="rubric-row"><span>Functional correctness</span><div class="rubric-track"><i style="width:30%"></i></div><b>30%</b></div>
+    <div class="rubric-row"><span>Design, responsiveness & accessibility</span><div class="rubric-track"><i style="width:20%"></i></div><b>20%</b></div>
+    <div class="rubric-row"><span>Code quality & structure</span><div class="rubric-track"><i style="width:20%"></i></div><b>20%</b></div>
+    <div class="rubric-row"><span>Testing, debugging & security</span><div class="rubric-track"><i style="width:15%"></i></div><b>15%</b></div>
+    <div class="rubric-row"><span>Viva, reflection & AI disclosure</span><div class="rubric-track"><i style="width:15%"></i></div><b>15%</b></div>
+  </div>
+</section>
+<section class="section" id="lab">
+  <div class="section-heading"><div><p class="eyebrow">Interactive learning activity</p><h2>Debugging decision lab</h2></div><p class="muted">Choose the likely cause, then inspect the feedback. This is a client-side learning simulation.</p></div>
+  <div class="simulator">
+    <div class="sim-question"><span class="tag">Scenario 01 · Fetch API</span><h3>Your page shows “Loading…” forever.</h3><p>A fetch call is made inside a React effect. The request may fail, and the UI never leaves its loading state.</p><pre><code>setLoading(true);
+fetch(apiUrl)
+  .then(r => r.json())
+  .then(setData);</code></pre></div>
+    <div class="sim-options" role="group" aria-label="Choose a diagnosis">
+      <button class="sim-option" data-answer="a">A. Add a success path, error handling and a finally block to reset loading.</button>
+      <button class="sim-option" data-answer="b">B. Increase the font size of the loading message.</button>
+      <button class="sim-option" data-answer="c">C. Remove all state variables from the component.</button>
+      <div id="simFeedback" class="feedback" aria-live="polite">Select an answer to receive feedback.</div>
+      <button class="btn primary" id="nextScenario">Next scenario</button>
+    </div>
+  </div>
+  <div class="quiz-card">
+    <div><p class="eyebrow">Quick check</p><h3>Which technology stores data as documents in collections?</h3></div>
+    <div class="quiz-controls"><select id="quizAnswer" aria-label="Choose answer"><option value="">Choose an answer…</option><option value="sql">Express.js</option><option value="mongo">MongoDB</option><option value="react">React.js</option><option value="node">Node.js</option></select><button class="btn secondary" id="checkQuiz">Check</button></div><p id="quizFeedback" class="muted" aria-live="polite"></p>
+  </div>
+</section>
+<section class="section contact" id="contact">
+  <div><p class="eyebrow">Course support</p><h2>Questions, feedback or a lab milestone?</h2><p class="muted">Replace the placeholders below with approved departmental contact details before publishing.</p></div>
+  <div class="contact-card"><strong>Course Coordinator</strong><span>Department of Computer Science & Engineering</span><span>Institution: [Add institution name]</span><span>Email: [Add official email]</span><a href="https://github.com/" target="_blank" rel="noreferrer">Course repository on GitHub ↗</a></div>
+</section>
+</main>
+<footer><div class="brand"><div class="brand-mark">FS</div><div><strong>FSWD Lab</strong><small>Outcome-based practical learning</small></div></div><p>Academic Year 2026–27 · Course code U23CS7L1</p><a href="#overview">Back to top ↑</a></footer>
+<script src="script.js"></script>
+</body></html>
