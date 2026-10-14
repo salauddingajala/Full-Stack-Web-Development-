@@ -182,7 +182,54 @@ fetch(apiUrl)
     <div class="section-heading evidence-heading"><div><p class="eyebrow">Responsible AI · Evidence of use</p><h3>Record your real AI-assisted course-planning work</h3></div><span class="tag">Genuine evidence only</span></div>
     <p class="muted">Open ChatGPT or the AI tool you actually used, run the prompt below, then paste the real response into the second box. This panel does not generate an AI answer or invent evidence.</p>
     <label for="courseAiPrompt">Course-planning prompt</label>
-    <textarea id="courseAiPrompt" rows="8">Using the uploaded FULL STACK WEB DEVELOPMENT LAB syllabus (U23CS7L1, B.E. CSE, Academic Year 2026–27), prepare an outcome-based course-planning package for the course. Preserve the five stated Course Outcomes and all 12 lab experiments. Create a course information sheet, session-wise work plan, course calendar, illustrative CO–PO mapping clearly marked for faculty validation, and practical assessments aligned with Bloom's Taxonomy. Include an experiential learning case, an interactive JavaScript/FSWD activity, a question-quality review, a CO-attainment plan, a course-support AI agent, responsible AI guidance, and continuous improvement. Do not invent institutional POs/PSOs, official attainment data, citations, screenshots, or deployment results. Identify assumptions and evidence that must be collected by the instructor.</textarea>
+    <textarea id="courseAiPrompt" rows="14">You are an expert in Outcome-Based Education (OBE), Bloom's Taxonomy, AI-supported course design and full-stack web development education.
+
+Use this exact course context:
+Course title: FULL STACK WEB DEVELOPMENT LAB
+Course code: U23CS7L1
+Programme: B.E. Computer Science and Engineering
+Academic year: 2026–27
+Credits: 1.5
+Prerequisite: HTML/CSS Basics
+Assessment pattern: CIE 40 marks; SEE 60 marks
+
+Course objectives:
+1. Understand HTML, CSS and JavaScript for web development.
+2. Develop responsive and interactive web applications.
+3. Build front-end applications using React.js.
+4. Create back-end services using Node.js, Express.js and MongoDB.
+5. Integrate and deploy full-stack MERN applications.
+
+Course Outcomes:
+CO1: Design responsive web pages using Semantic HTML and CSS.
+CO2: Develop interactive web applications using JavaScript.
+CO3: Build dynamic user interfaces using React.js.
+CO4: Develop RESTful APIs and database-driven applications using the MERN stack.
+CO5: Integrate and deploy full-stack web applications on cloud platforms.
+
+The 12 syllabus laboratory experiments are:
+1. HTML: Build a personal portfolio with required tags, image, form, table, skills and ratings.
+2. CSS: Style the portfolio using the Box Model, Flexbox, Grid and responsive media queries.
+3. JavaScript basics: operators, control flow, arrays, functions and string manipulation.
+4. DOM and events: dynamically add/remove project cards, change themes and respond to user events.
+5. Form validation: validate the contact form using regular expressions and try-catch exception handling.
+6. Fetch API: retrieve live data and render it using async/await.
+7. React.js: rebuild the portfolio using functional components, props, useState and useEffect.
+8. Node.js: understand the event loop, create a basic HTTP server and use core modules.
+9. Express.js: build a RESTful API serving portfolio data and handling contact-form submissions.
+10. MongoDB and Mongoose: connect to MongoDB Atlas and perform CRUD on Projects and Contacts.
+11. Full-stack integration: integrate React, Express and MongoDB into a deployable MERN application.
+12. Deployment: deploy the full MERN portfolio to a cloud platform and verify public access.
+
+Create a complete AI-enabled course-planning package aligned with these exact course outcomes and experiments. Include a course information sheet, an experiment/session work plan, calendar template, illustrative CO–PO mapping clearly marked for faculty validation, Bloom's Taxonomy alignment, assessment plan and rubric, an experiential learning case, an interactive JavaScript/FSWD activity, question-paper quality review, CO-attainment method, course-management AI-agent workflow, responsible AI policy, research integration plan and continuous-improvement cycle.
+
+Rules:
+- Do not invent institution-approved POs/PSOs, holiday calendar, actual student marks, CO-attainment data, completed deployments, screenshots or survey responses.
+- Mark CO–PO mapping, detailed calendar dates, suggested rubric weights and example calculations as provisional until checked against institutional policy.
+- Distinguish implemented features from proposed features that require external integration.
+- Cite any research papers with exact authors, title, year, venue and DOI/official URL, and say so if a detail cannot be verified.
+- Keep the output practical for an FDP capstone portfolio and use numbered sections, not "Part 1/Part 2".
+- Finish with a checklist of evidence the faculty member must actually capture before submission.</textarea>
     <div class="evidence-actions"><a class="btn primary" href="https://chatgpt.com/" target="_blank" rel="noreferrer">Open ChatGPT ↗</a><button class="btn secondary" type="button" id="copyAiPrompt">Copy prompt</button><button class="btn ghost" type="button" id="downloadAiEvidence">Download prompt + response</button></div>
     <label for="courseAiResponse">Actual AI response (paste it here after running the prompt)</label>
     <textarea id="courseAiResponse" rows="8" placeholder="Paste the actual response from ChatGPT or the AI tool you used. Do not use a sample response or fabricate this evidence."></textarea>
