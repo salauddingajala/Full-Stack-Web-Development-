@@ -12,7 +12,7 @@
   <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
   <nav id="mainNav" aria-label="Main navigation">
     <a href="#overview">Overview</a><a href="#outcomes">Outcomes</a><a href="#schedule">Experiments</a>
-    <a href="#resources">Resources</a><a href="#assessment">Assessment</a><a href="#lab">Interactive Lab</a><a href="#ai-management">AI Course Management</a><a href="#research-ai-policy">Research & AI Policy</a>
+    <a href="#resources">Resources</a><a href="#assessment">Assessment</a><a href="#lab">Interactive Lab</a><a href="#ai-management">AI Course Management</a><a href="#research-ai-policy">Research & AI Policy</a><a href="#responsible-ai-evidence">AI Evidence</a>
   </nav>
 </header>
 <main>
@@ -177,6 +177,18 @@ fetch(apiUrl)
   </div>
   <div class="future-research"><h3>Proposed future research direction</h3><p><strong>Human-validated adaptive laboratory support for full-stack web development.</strong> Pilot whether formative quiz results, rubric evidence and learner reflections paired with tailored practice recommendations improve CO attainment. Use a comparison design where feasible, anonymise data, and obtain institutional approval before collecting research data.</p></div>
   <div class="section-heading policy-heading"><div><p class="eyebrow">FDP Capstone · Case Study 15</p><h2>Responsible AI use</h2></div><span class="tag">Student and faculty guidance</span></div>
+
+  <div class="ai-evidence-panel" id="responsible-ai-evidence">
+    <div class="section-heading evidence-heading"><div><p class="eyebrow">Responsible AI · Evidence of use</p><h3>Record your real AI-assisted course-planning work</h3></div><span class="tag">Genuine evidence only</span></div>
+    <p class="muted">Open ChatGPT or the AI tool you actually used, run the prompt below, then paste the real response into the second box. This panel does not generate an AI answer or invent evidence.</p>
+    <label for="courseAiPrompt">Course-planning prompt</label>
+    <textarea id="courseAiPrompt" rows="8">Using the uploaded FULL STACK WEB DEVELOPMENT LAB syllabus (U23CS7L1, B.E. CSE, Academic Year 2026–27), prepare an outcome-based course-planning package for the course. Preserve the five stated Course Outcomes and all 12 lab experiments. Create a course information sheet, session-wise work plan, course calendar, illustrative CO–PO mapping clearly marked for faculty validation, and practical assessments aligned with Bloom's Taxonomy. Include an experiential learning case, an interactive JavaScript/FSWD activity, a question-quality review, a CO-attainment plan, a course-support AI agent, responsible AI guidance, and continuous improvement. Do not invent institutional POs/PSOs, official attainment data, citations, screenshots, or deployment results. Identify assumptions and evidence that must be collected by the instructor.</textarea>
+    <div class="evidence-actions"><a class="btn primary" href="https://chatgpt.com/" target="_blank" rel="noreferrer">Open ChatGPT ↗</a><button class="btn secondary" type="button" id="copyAiPrompt">Copy prompt</button><button class="btn ghost" type="button" id="downloadAiEvidence">Download prompt + response</button></div>
+    <label for="courseAiResponse">Actual AI response (paste it here after running the prompt)</label>
+    <textarea id="courseAiResponse" rows="8" placeholder="Paste the actual response from ChatGPT or the AI tool you used. Do not use a sample response or fabricate this evidence."></textarea>
+    <p id="aiEvidenceStatus" class="muted small-note" aria-live="polite">Your response is not automatically sent or saved by this page. Use “Download prompt + response” to create a local evidence transcript.</p>
+    <div class="evidence-screenshot-steps"><h4>Capture genuine screenshots for your FDP submission</h4><ol><li>Open ChatGPT or the AI tool you actually used and submit the prompt above.</li><li>Wait for its real response, then capture a screenshot showing both prompt and response. If it spans multiple screens, take more than one screenshot.</li><li>On Windows, press <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to capture the actual tool window.</li><li>Save the original screenshots and add them to your portfolio. Do not submit this website panel, a mock-up, or a generated image as proof of AI use.</li></ol></div>
+  </div>
   <div class="policy-grid">
     <article class="policy-card"><h3>Permitted support</h3><ul><li>Explain concepts and official documentation.</li><li>Brainstorm designs and test cases.</li><li>Request debugging hints and code review.</li><li>Improve comments, accessibility and documentation.</li></ul></article>
     <article class="policy-card"><h3>Disclosure & integrity</h3><ul><li>Disclose the AI tool and how it was used.</li><li>Cite sources and verify generated references.</li><li>Never fabricate results, logs, attendance or research.</li><li>Do not present AI output as independent work when disclosure is required.</li></ul></article>
@@ -188,8 +200,15 @@ fetch(apiUrl)
 </section>
 
 <section class="section contact" id="contact">
-  <div><p class="eyebrow">Course support</p><h2>Questions, feedback or a lab milestone?</h2><p class="muted">departmental contact details .</p></div>
-  <div class="contact-card"><strong>Course Coordinator</strong><span>Department of Computer Science & Engineering</span><span>Institution: LORDS INSTITUTE OF ENGINEERING & TECHNOLOGY<a href="https://www.lords.ac.in/"> </a> </span><span>Email: salauddin@lords.ac.in </span><a href="https://github.com/" target="_blank" rel="noreferrer">Course repository on GitHub ↗</a></div>
+  <div><p class="eyebrow">Course support & exit ticket</p><h2>Questions, feedback or a lab milestone?</h2><p class="muted">Share what you understood, what remains unclear, and how confident you feel after the FSWD lab. Responses help guide teaching improvement.</p>
+    <div class="exit-ticket-card"><h3>FSWD Lab feedback / exit ticket</h3><p class="muted">The Google Form is created in the course coordinator's Google account using the included Apps Script. After creating it, paste its actual responder URL into <code>EXIT_TICKET_FORM_URL</code> in <code>script.js</code> and commit the change. The live form will then appear here.</p>
+      <a class="btn primary" id="exitTicketLink" href="https://forms.google.com/" target="_blank" rel="noreferrer">Create or open Google Form ↗</a>
+      <p id="exitTicketStatus" class="muted small-note" aria-live="polite">No live response URL is configured yet. Use the Google Form setup guide, create the form in your account, then map its responder URL here.</p>
+      <div id="exitTicketEmbedWrap" class="exit-ticket-embed-wrap" hidden><iframe id="exitTicketEmbed" title="FSWD Lab feedback and exit ticket" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <a href="https://github.com/salauddingajala/Full-Stack-Web-Development-/blob/main/GOOGLE-FORM-SETUP.md" target="_blank" rel="noreferrer">Open step-by-step Google Form setup ↗</a>
+    </div>
+  </div>
+  <div class="contact-card"><strong>Course Coordinator</strong><span>Department of Computer Science & Engineering</span><span>Institution: LORDS INSTITUTE OF ENGINEERING & TECHNOLOGY</span><span>Email: salauddin@lords.ac.in</span><a href="https://github.com/salauddingajala/Full-Stack-Web-Development-" target="_blank" rel="noreferrer">Course repository on GitHub ↗</a></div>
 </section>
 </main>
 <footer><div class="brand"><div class="brand-mark">FS</div><div><strong>FSWD Lab</strong><small>Outcome-based practical learning</small></div></div><p>Academic Year 2026–27 · Course code U23CS7L1</p><a href="#overview">Back to top ↑</a></footer>
