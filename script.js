@@ -55,3 +55,65 @@ document.querySelector('#agentForm')?.addEventListener('submit', event => {
   const response = document.querySelector('#agentResponse');
   if (response) response.textContent = agentResponses[key] || 'Select a question first.';
 });
+
+
+/* User-owned AI evidence panel. This code does not fabricate a response or call an AI API. */
+const EXIT_TICKET_FORM_URL = ""; // Paste the actual full responder URL here after creating the form.
+const promptBox = document.querySelector("#courseAiPrompt");
+const responseBox = document.querySelector("#courseAiResponse");
+const aiEvidenceStatus = document.querySelector("#aiEvidenceStatus");
+
+document.querySelector("#copyAiPrompt")?.addEventListener("click", async () => {
+  if (!promptBox) return;
+  try {
+    await navigator.clipboard.writeText(promptBox.value);
+    if (aiEvidenceStatus) aiEvidenceStatus.textContent = "Prompt copied. Open the AI tool, submit it, and paste its genuine response below.";
+  } catch (error) {
+    promptBox.focus(); promptBox.select();
+    const copied = document.execCommand("copy");
+    if (aiEvidenceStatus) aiEvidenceStatus.textContent = copied ? "Prompt copied. Open the AI tool and paste its genuine response below." : "Clipboard access was blocked. Select the prompt text and copy it manually.";
+  }
+});
+
+document.querySelector("#downloadAiEvidence")?.addEventListener("click", () => {
+  const prompt = promptBox?.value.trim() || "";
+  const response = responseBox?.value.trim() || "";
+  if (!response) {
+    if (aiEvidenceStatus) aiEvidenceStatus.textContent = "Paste the actual AI response first. This project does not create a response for evidence.";
+    responseBox?.focus(); return;
+  }
+  const evidence = [
+    "FSWD FDP CAPSTONE — AI USE EVIDENCE",
+    "Project: An AI-Enabled Framework for Outcome-Based Smart Course Design, Automated CO-PO Mapping & Adaptive Content Generation",
+    "Course: U23CS7L1 Full Stack Web Development Lab, Academic Year 2026–27",
+    "", "PROMPT USED", prompt, "", "ACTUAL RESPONSE COPIED FROM THE AI TOOL", response, "",
+    "Attach genuine screenshots from the AI tool showing the original prompt and response."
+  ].join("\n");
+  const blob = new Blob([evidence], {type:"text/plain;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const download = document.createElement("a"); download.href = url; download.download = "FSWD_AI_Prompt_Response_Evidence.txt";
+  document.body.appendChild(download); download.click(); download.remove(); URL.revokeObjectURL(url);
+  if (aiEvidenceStatus) aiEvidenceStatus.textContent = "Evidence transcript downloaded. Save genuine screenshots from the AI tool separately.";
+});
+
+const exitTicketLink = document.querySelector("#exitTicketLink");
+const exitTicketStatus = document.querySelector("#exitTicketStatus");
+const exitTicketEmbedWrap = document.querySelector("#exitTicketEmbedWrap");
+const exitTicketEmbed = document.querySelector("#exitTicketEmbed");
+if (EXIT_TICKET_FORM_URL.trim()) {
+  exitTicketLink.href = EXIT_TICKET_FORM_URL;
+  exitTicketLink.textContent = "Open FSWD Lab exit ticket ↗";
+  if (exitTicketStatus) exitTicketStatus.textContent = "The course feedback form is linked. Students can submit responses using this form.";
+  if (exitTicketEmbed && exitTicketEmbedWrap) {
+    try {
+      const embedUrl = new URL(EXIT_TICKET_FORM_URL);
+      embedUrl.searchParams.set("embedded", "true");
+      exitTicketEmbed.src = embedUrl.toString(); exitTicketEmbedWrap.hidden = false;
+    } catch (error) {
+      if (exitTicketStatus) exitTicketStatus.textContent = "The form link is configured, but its URL could not be embedded. The button above still links to the form; check the responder URL.";
+    }
+  }
+} else {
+  exitTicketLink.href = "https://forms.google.com/";
+  exitTicketLink.textContent = "Create or open Google Form ↗";
+}
