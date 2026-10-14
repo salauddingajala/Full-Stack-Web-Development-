@@ -39,3 +39,19 @@ document.querySelector("#checkQuiz")?.addEventListener("click", () => {
   const feedback = document.querySelector("#quizFeedback");
   feedback.textContent = answer === "mongo" ? "Correct — MongoDB stores BSON documents in collections." : answer ? "Try again. Think of the database layer in the MERN stack." : "Choose an answer first.";
 });
+
+/* Course management FAQ prototype — fixed approved responses; no external AI calls. */
+const agentResponses = {
+  setup: 'Start with the experiment objective and expected output. Build the smallest working version, test it, record observations, and commit your own work. Follow your instructor lab sheet if it provides different instructions.',
+  react: 'Use the official React learning resource: https://react.dev/learn. Focus on components, props, state and effects, then apply them to the React lab experiment.',
+  api: 'Inspect the browser Network panel and console. Check the request URL, HTTP status, response.ok, JSON parsing and error handling. For deployed apps, check environment variables and server logs without exposing credentials.',
+  deadline: 'Use the instructor-approved course calendar or LMS as the source of truth. This demo does not store assignment dates or send reminders; an approved calendar or LMS integration is needed.',
+  ai: 'Use AI only within your instructor and institutional policy. Disclose assistance, verify every suggestion, understand and test submitted code, and do not submit generated work as independent work when that violates the rules.',
+  other: 'This prototype answers predefined FAQs only. Contact the course coordinator for questions not covered here. Production deployment should provide authenticated human escalation.'
+};
+document.querySelector('#agentForm')?.addEventListener('submit', event => {
+  event.preventDefault();
+  const key = document.querySelector('#agentQuestion')?.value;
+  const response = document.querySelector('#agentResponse');
+  if (response) response.textContent = agentResponses[key] || 'Select a question first.';
+});
