@@ -38,22 +38,31 @@ Use authentication for private student records, role-based access, data minimisa
 ### Review protocol
 Search scholarly databases and publisher sites for work on AI-supported course design, Bloom's taxonomy, programming feedback, learning analytics and automated assessment. Verify each paper's exact title, authors, year, venue, DOI/official URL and availability; inspect its abstract and methods where possible. Do not cite search snippets as papers.
 
-### Five research themes to verify
-The website supplies targeted discovery searches for five themes:
-1. LLM-based classification of learning objectives and questions with Bloom's taxonomy (2025 research lead).
-2. Reviews or mapping studies of generative AI in higher education (2024 research lead).
-3. AI-assisted feedback, debugging and programming education (2024–2025 research lead).
-4. Learning analytics and course-outcome prediction (2024–2025 research lead).
-5. AI-generated assessment and automated question-quality evaluation (2024–2025 research lead).
+### Five verified recent research papers
 
-These are **research leads, not five verified citations**. Before formal submission, replace each lead with a paper whose bibliographic details and claims have been checked.
+1. **Almatrafi, O., & Johri, A. (2025).** Leveraging generative AI for course learning outcome categorization using Bloom's taxonomy. *Computers and Education: Artificial Intelligence, 8*, 100404. https://doi.org/10.1016/j.caeai.2025.100404  
+   **Summary:** On a dataset of 1,000 annotated learning outcomes, the authors compared GPT-4 prompt strategies and a BERT baseline. Context-rich prompting performed best among the prompt strategies, while fine-tuned BERT performed better overall. **Application to FSWD:** use AI to propose CO/Bloom tags, then validate the cognitive demand against each actual learning task.
 
-### Literature synthesis framework
-For each verified paper record: (a) research problem/question, (b) method/data, (c) main findings, (d) limitations and (e) relevance to FSWD. Compare whether evidence supports AI as a planning assistant, feedback tool or analytics aid. Keep faculty validation explicit, especially for practical skills and grading.
+2. **Elkins, S., Kochmar, E., Cheung, J. C. K., & Serban, I. (2024).** How Teachers Can Use Large Language Models and Bloom's Taxonomy to Create Educational Quizzes. *Proceedings of the AAAI Conference on Artificial Intelligence, 38*(21), 23084–23091. https://doi.org/10.1609/aaai.v38i21.30353  
+   **Summary:** The authors studied LLM question generation using Bloom-derived learning goals. In their experiments, generated-question-assisted quizzes did not lose quality compared with manually written quizzes, and some evaluated quality measures improved. **Application to FSWD:** use generation as a draft stage for quizzes and question papers, followed by faculty checks for technical correctness, CO coverage, marks and difficulty.
+
+3. **Kohen-Vacs, D., Usher, M., & Jansen, M. (2025).** Integrating Generative AI into Programming Education: Student Perceptions and the Challenge of Correcting AI Errors. *International Journal of Artificial Intelligence in Education, 35*, 3166–3184. https://doi.org/10.1007/s40593-025-00496-4  
+   **Summary:** Two quantitative studies examined student perceptions and their ability to correct LLM-generated code. Students generally viewed GenAI positively, but found the AI-code-correction tasks more difficult than traditional instructor-designed programming tasks. **Application to FSWD:** include controlled debugging tasks and live explanation so students demonstrate they can critically inspect code, rather than merely generate or paste it.
+
+4. **Zhang, Z., Dong, Z., Shi, Y., Price, T., Matsuda, N., & Xu, D. (2024).** Students' Perceptions and Preferences of Generative Artificial Intelligence Feedback for Programming. *Proceedings of the AAAI Conference on Artificial Intelligence, 38*(21), 23250–23258. https://doi.org/10.1609/aaai.v38i21.30372  
+   **Summary:** The study investigated ChatGPT-generated feedback for four Java lab assignments. Students generally viewed the feedback as formative and preferred feedback that included their code, reporting greater specificity and corrective usefulness; preferences about feedback tone varied. **Application to FSWD:** feedback should reference the student's actual task and tests when approved, give actionable hints, and remain subject to instructor review and data-protection safeguards.
+
+5. **Yusuf, A., Pervin, N., Román-González, M., & Noor, N. M. (2024).** Generative AI in education and research: A systematic mapping review. *Review of Education, 12*(2), e3489. https://doi.org/10.1002/rev3.3489  
+   **Summary:** This systematic mapping review analysed 407 publications and grouped research themes around applications and potential, ethical implications, perspectives, adoption and performance. It identified limited experimental evidence and gaps in the exploration of cultural dimensions and ethical concerns. **Application to FSWD:** frame AI use as a testable teaching intervention and document outcomes, limitations, student privacy and human oversight.
+
+### Literature synthesis
+
+Across these five papers, AI appears promising as an assistant for classifying learning outcomes, drafting Bloom-aligned quizzes, and giving formative programming feedback. However, the papers do not justify unreviewed automation. Outcome categorisation depends on prompt context and remains inferior to a strong supervised baseline in the reported study; quiz generation still needs instructor validation; and the programming studies emphasise that students need to critically evaluate generated feedback and code. The systematic mapping review places these applications within wider questions about ethics, adoption and the shortage of experimental evidence. Taken together, the literature supports a human-in-the-loop design for the FSWD portfolio: AI may draft mappings, questions and hints, while faculty check alignment and students demonstrate independent coding, debugging and explanation.
 
 ### Proposed future research direction
-**Human-validated adaptive laboratory support for full-stack web development.** Study whether formative quiz results, rubric evidence and reflections paired with tailored practice recommendations improve CO attainment. Where feasible, use pre/post assessment and a comparison group, report limitations, anonymise records and seek institutional approval before collecting research data.
 
+**Human-validated adaptive laboratory support for full-stack web development.** Pilot whether tailored practice recommendations based on quiz responses, rubric evidence and student reflection improve FSWD CO attainment. Establish baseline and post-intervention measures, use a comparison group where feasible, report limitations, minimise and anonymise data, and obtain institutional approval before collecting research data.
+ 
 ## 10. Responsible AI Use — Case Study 15
 
 ### Student AI usage policy
